@@ -9186,3 +9186,9 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
