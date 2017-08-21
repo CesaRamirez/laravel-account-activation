@@ -20,6 +20,8 @@ class ActivationEmail extends Mailable
 
     /**
      * Create a new message instance.
+     *
+     * @param \App\User $user
      */
     public function __construct(User $user)
     {

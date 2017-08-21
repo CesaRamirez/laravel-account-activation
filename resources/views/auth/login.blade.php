@@ -5,11 +5,10 @@
     <div class="col-6">
         <div class="card">
             <div class="card-header">Login</div>
-            <div class="card-body">
-                <div class="card-text">
-                        <form method="POST" action="{{ route('login') }}">
-                            {{ csrf_field() }}
-
+                <form method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
+                    <div class="card-body">
+                        <div class="card-text">
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-right">E-Mail Address</label>
 
@@ -69,7 +68,7 @@
                             Resend Activation Email
                         </a>
                     </div>
-                    </form>
+                </form>
             </div>
         </div>
     </div>

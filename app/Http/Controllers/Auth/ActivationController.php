@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class ActivationController extends Controller
 {
+    /**
+     * Activate account.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function activate(Request $request)
     {
         $user = User::where('email', $request->email)

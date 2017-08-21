@@ -19,6 +19,8 @@ class UserRequestedActivationEmail
 
     /**
      * Create a new event instance.
+     *
+     * @param \App\User $user
      */
     public function __construct(User $user)
     {
