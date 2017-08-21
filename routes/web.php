@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+$router->get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+$router->auth();
 
-Route::get('/home', 'HomeController@index')->name('home');
+$router->get('/home', 'HomeController@index')->name('home');
+
+$router->get('/auth/activate', 'Auth\ActivationController@activate')->name('auth.activate');

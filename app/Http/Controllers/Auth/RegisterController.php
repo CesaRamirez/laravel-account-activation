@@ -83,6 +83,7 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         event(new UserRequestedActivationEmail($user));
+
         $this->guard()->logout();
 
         return redirect($this->redirectPath())

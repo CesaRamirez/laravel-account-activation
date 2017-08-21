@@ -15,7 +15,7 @@ class UserRequestedActivationEmail
      *
      * @var \App\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new event instance.
