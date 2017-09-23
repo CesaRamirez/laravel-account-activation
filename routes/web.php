@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+$router->get('/', function () {
     return view('welcome');
+});
+
+$router->auth();
+
+$router->get('/home', 'HomeController@index')->name('home');
+
+$router->namespace('Auth')->prefix('auth')->group(function ($router) {
+    $router->get('/activate', 'ActivationController@activate')
+    ->name('auth.activate');
+    $router->get('/activate/resend',
+    'ActivationResendController@showResendForm')
+    ->name('auth.activate.resend');
+    $router->post('/activate/resend',
+    'ActivationResendController@resend');
 });
