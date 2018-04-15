@@ -30944,16 +30944,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -31013,20 +31003,6 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "navbar-dropdown is-boxed" }, [
-              _c("a", { staticClass: "navbar-item" }, [
-                _vm._v("\n                    Dashboard\n                ")
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "navbar-item" }, [
-                _vm._v("\n                    Profile\n                ")
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "navbar-item" }, [
-                _vm._v("\n                    Settings\n                ")
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "navbar-divider" }),
-              _vm._v(" "),
               _c(
                 "a",
                 {

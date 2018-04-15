@@ -65,6 +65,13 @@
                             </a>
                         </small>
                     </div>
+                    <div class="has-text-centered">
+                        <small>
+                            <a class="is-link" href="{{ route('auth.activate.resend') }}">
+                                Resend Activation Email
+                            </a>
+                        </small>
+                    </div>
                 </div>
             </form>
         </article>

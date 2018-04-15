@@ -18,7 +18,8 @@ class ActivationController extends Controller
     public function activate(Request $request)
     {
         $user = User::where('email', $request->email)
-                    ->where('activation_token', $request->token)->firstOrFail();
+                    ->where('activation_token', $request->token)
+                    ->firstOrFail();
 
         $user->update([
             'active'           => true,
@@ -28,6 +29,6 @@ class ActivationController extends Controller
         auth()->loginUsingId($user->id);
 
         return redirect(route('home'))
-                        ->withSuccess('Activated!  You\'re now signed in.');
+                    ->with('success', 'Activated!  You\'re now signed in.');
     }
 }

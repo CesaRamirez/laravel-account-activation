@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Events\Auth\UserRequestedActivationEmail;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ActivationRequest;
 use App\User;
-use Illuminate\Http\Request;
 
 class ActivationResendController extends Controller
 {
@@ -26,19 +26,13 @@ class ActivationResendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function resend(Request $request)
+    public function resend(ActivationRequest $request)
     {
-        $this->validate($request, [
-            'email' => ['required', 'email', 'exists:users,email'],
-        ], [
-            'email.exists' => 'Could not find that account.',
-        ]);
-
         $user = User::where('email', $request->email)->first();
 
         event(new UserRequestedActivationEmail($user));
 
         return redirect(route('login'))
-                ->withSuccess('Account activation email has been resend.');
+                    ->with('success', 'Account activation email has been resend.');
     }
 }

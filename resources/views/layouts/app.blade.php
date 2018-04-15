@@ -14,7 +14,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app" >
+    <div id="app">
         @include('layouts.partials._navbar')
         @include('layouts.partials._alerts')
         <div class="container">

@@ -4,16 +4,6 @@
                 <div class="navbar-item has-dropdown is-hoverable" :class="{ 'is-active': navbar }">
                     <a class="navbar-link" @click.prevent="navbar = !navbar" v-text="user.name" />
                     <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item">
-                            Dashboard
-                        </a>
-                        <a class="navbar-item">
-                            Profile
-                        </a>
-                        <a class="navbar-item">
-                            Settings
-                        </a>
-                        <hr class="navbar-divider">
                         <a class="navbar-item" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             Logout

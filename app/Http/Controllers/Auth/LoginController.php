@@ -51,7 +51,7 @@ class LoginController extends Controller
                     $query->where('active', true);
                 }),
             ],
-            'password'        => ['required', 'string'],
+            'password' => ['required', 'string'],
         ], [
             $this->username().'.exists' => 'No account found, or your need to active account.',
         ]);
