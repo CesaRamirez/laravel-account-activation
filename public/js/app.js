@@ -30376,6 +30376,7 @@ exports.clearImmediate = clearImmediate;
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component("navbar-burger", __webpack_require__(39));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component("navbar-menu", __webpack_require__(47));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component("alert", __webpack_require__(54));
 
 /***/ }),
 /* 39 */
@@ -31079,6 +31080,125 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(10)
+/* script */
+var __vue_script__ = __webpack_require__(55)
+/* template */
+var __vue_template__ = __webpack_require__(56)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Alert.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1f8bf896", Component.options)
+  } else {
+    hotAPI.reload("data-v-1f8bf896", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    text: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      show: true
+    };
+  }
+});
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("transition", { attrs: { name: "fade" } }, [
+    _vm.show
+      ? _c(
+          "div",
+          { staticClass: "notification is-success", attrs: { role: "alert" } },
+          [
+            _c("button", {
+              staticClass: "delete",
+              on: {
+                click: function($event) {
+                  _vm.show = false
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("strong", [_vm._v(_vm._s(_vm.text))])
+          ]
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1f8bf896", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -19,7 +19,6 @@ body {
 
 nav.navbar {
   border-top: 6px solid #276cda;
-  margin-bottom: 1rem;
 }
 
 .navbar-item.brand-text {
@@ -127,4 +126,12 @@ nav.navbar {
 
 .items-center {
   align-items: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }

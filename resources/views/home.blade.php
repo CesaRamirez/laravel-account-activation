@@ -1,17 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container d-flex justify-content-center align-items-center mt-5">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    <div class="card-text">
-                        You are logged in!                        
-                    </div>
-                </div>
+<div class="container">
+    <article class="card is-rounded">
+        <div class="card-header">
+            <div class="card-header-title">
+                Dashboard
             </div>
         </div>
+        <div class="card-content">
+            You are logged in!
+        </div>
+    </article>
 </div>
 @endsection
