@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+{{-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
         {{ config('app.name', 'Laravel') }}
@@ -41,5 +41,32 @@
                 @endguest
             </ul>
         </div>
+    </div>
+</nav> --}}
+
+<nav class="navbar is-white is-shadowless">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/acme.png" alt="Logo">
+            </a>
+            <navbar-burger/>
+        </div>
+        @guest
+            <div class="navbar-end">
+                <a
+                    class="navbar-item"
+                    href="{{ route('login') }}">
+                    Login
+                </a>
+                <a
+                    class="navbar-item"
+                    href="{{ route('register') }}">
+                    Register
+                </a>
+            </div>
+        @else
+            <navbar-menu :user="{{ auth()->user() }}" />
+        @endguest
     </div>
 </nav>
